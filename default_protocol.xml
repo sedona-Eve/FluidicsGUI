@@ -1,0 +1,1444 @@
+<protocol>
+  <step name="Hybridization 1">
+    <move well="Well 1" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 2">
+    <move well="Well 2" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 3">
+    <move well="Well 3" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 4">
+    <move well="Well 4" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 5">
+    <move well="Well 5" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 6">
+    <move well="Well 6" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 7">
+    <move well="Well 7" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 8">
+    <move well="Well 8" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 9">
+    <move well="Well 9" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 10">
+    <move well="Well 10" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 11">
+    <move well="Well 11" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 12">
+    <move well="Well 12" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 13">
+    <move well="Well 13" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 14">
+    <move well="Well 14" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 15">
+    <move well="Well 15" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 16">
+    <move well="Well 16" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 17">
+    <move well="Well 17" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 18">
+    <move well="Well 18" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 19">
+    <move well="Well 19" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 20">
+    <move well="Well 20" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 21">
+    <move well="Well 21" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 22">
+    <move well="Well 22" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 23">
+    <move well="Well 23" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 24">
+    <move well="Well 24" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 25">
+    <move well="Well 25" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 26">
+    <move well="Well 26" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 27">
+    <move well="Well 27" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 28">
+    <move well="Well 28" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 29">
+    <move well="Well 29" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 30">
+    <move well="Well 30" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 31">
+    <move well="Well 31" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 32">
+    <move well="Well 32" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 33">
+    <move well="Well 33" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 34">
+    <move well="Well 34" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 35">
+    <move well="Well 35" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 36">
+    <move well="Well 36" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 37">
+    <move well="Well 37" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 38">
+    <move well="Well 38" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 39">
+    <move well="Well 39" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 40">
+    <move well="Well 40" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 41">
+    <move well="Well 41" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 42">
+    <move well="Well 42" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 43">
+    <move well="Well 43" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 44">
+    <move well="Well 44" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 45">
+    <move well="Well 45" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 46">
+    <move well="Well 46" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 47">
+    <move well="Well 47" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 48">
+    <move well="Well 48" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 49">
+    <move well="Well 49" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 50">
+    <move well="Well 50" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 51">
+    <move well="Well 51" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 52">
+    <move well="Well 52" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 53">
+    <move well="Well 53" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 54">
+    <move well="Well 54" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 55">
+    <move well="Well 55" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 56">
+    <move well="Well 56" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 57">
+    <move well="Well 57" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 58">
+    <move well="Well 58" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 59">
+    <move well="Well 59" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 60">
+    <move well="Well 60" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 61">
+    <move well="Well 61" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 62">
+    <move well="Well 62" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 63">
+    <move well="Well 63" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 64">
+    <move well="Well 64" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 65">
+    <move well="Well 65" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 66">
+    <move well="Well 66" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 67">
+    <move well="Well 67" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 68">
+    <move well="Well 68" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 69">
+    <move well="Well 69" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 70">
+    <move well="Well 70" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 71">
+    <move well="Well 71" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 72">
+    <move well="Well 72" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 73">
+    <move well="Well 73" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 74">
+    <move well="Well 74" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 75">
+    <move well="Well 75" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 76">
+    <move well="Well 76" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 77">
+    <move well="Well 77" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 78">
+    <move well="Well 78" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 79">
+    <move well="Well 79" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 80">
+    <move well="Well 80" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 81">
+    <move well="Well 81" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 82">
+    <move well="Well 82" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 83">
+    <move well="Well 83" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 84">
+    <move well="Well 84" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 85">
+    <move well="Well 85" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 86">
+    <move well="Well 86" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 87">
+    <move well="Well 87" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 88">
+    <move well="Well 88" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 89">
+    <move well="Well 89" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 90">
+    <move well="Well 90" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 91">
+    <move well="Well 91" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 92">
+    <move well="Well 92" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 93">
+    <move well="Well 93" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 94">
+    <move well="Well 94" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 95">
+    <move well="Well 95" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+  <step name="Hybridization 96">
+    <move well="Well 96" />
+    <pause time="3" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="900" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="5" time="120" />
+    <pause time="3" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+  </step>
+</protocol>
+
+
