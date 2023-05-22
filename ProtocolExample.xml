@@ -1,0 +1,57 @@
+<protocol>
+  <step name="Hybridization 1">
+    <move well="Well 1" />
+    <pump name="Pump 1" speed="5" time="10" />
+    <pause time="5" />
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="10" time="20" />
+    <pause time="5" />
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="10" time="30" />
+    <pause time="5" />
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="30" />
+    <pause time="20" />
+
+    <!-- steps for hybridizing wells 4-95 omitted for brevity -->
+
+  </step>
+  <step name="Bleach">
+    <move buffer="Bleach" />
+    <pump name="Pump 1" speed="10" time="30" />
+    <pause time="5" />
+  </step>
+  <step name="Imaging">
+    <move buffer="Imaging" />
+    <pump name="Pump 1" speed="5" time="15" />
+    <pause time="5" />
+  </step>
+  <step name="Wash">
+    <move buffer="Wash" />
+    <pump name="Pump 1" speed="10" time="20" />
+    <pause time="5" />
+  </step>
+</protocol>
+
+<!-- instructionns:  This XML file defines a protocol consisting of four
+ steps: Hybridization, Bleach, Imaging, and Wash. Each step consists 
+ of a series of commands that move the CNC router to a specific well 
+ or buffer position, run the peristaltic pump for a specified time
+  and speed, and pause for a specified amount of time before moving
+   on to the next step.
+
+The move commands for the hybridization step move the CNC router to each 
+well on the 96-well plate in order, and the move commands for the bleach, 
+imaging, and wash steps move the CNC router to the corresponding buffer 
+positions. The pump commands specify the speed and duration of the
+ peristaltic pump, and the pause commands introduce a pause between
+  steps to allow for any necessary manual intervention.
+  
+  
+  You will want to build out this protocol for each round of hybridization and adjust the 
+  pause time after the hybiridzation rounds to account for image acquisition
+  
+  
+  Sedona Murphy
+  2023-05-22
+   -->
