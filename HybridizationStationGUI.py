@@ -254,7 +254,7 @@ class Application(tk.Frame):
         x = self.positions[well_name]["x"]
         y = self.positions[well_name]["y"]
         z = self.positions[well_name]["z"]
-        self.cnc.moveToPosition(x, y, z)
+        self.cnc.moveToPosition(x, y, z, well_name)
 
     def dispense(self):
         well_name = self.buffer_selection.get()
