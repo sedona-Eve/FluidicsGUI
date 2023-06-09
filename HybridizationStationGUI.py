@@ -31,7 +31,7 @@ class CNCController:
         response = self.ser.readline()
         return response
 
-    def moveToPosition(self, x, y, z, well):
+    def moveToPosition(self, x, y, z, well_name):
     #interprets the gcode of the cnc router
         # Move up before going to the well
         self.moveUp(10)   #update this depending on needle height and well height 
