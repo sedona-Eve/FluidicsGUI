@@ -1,13 +1,13 @@
 <positions>
-  <well name="Hybridize 1" x="10" y="10" z="0" />
-  <well name="Hybridize 2" x="20" y="10" z="0" />
-  <well name="Hybridize 3" x="30" y="10" z="0" />
-  <well name="Hybridize 4" x="40" y="10" z="0" />
+  <well_name="Hybridize 1" x="10" y="10" z="0" />
+  <well_name="Hybridize 2" x="20" y="10" z="0" />
+  <well_name="Hybridize 3" x="30" y="10" z="0" />
+  <well_name="Hybridize 4" x="40" y="10" z="0" />
   <!-- coordinates for hybridize wells 5-95 omitted for brevity -->
-  <well name="Hybridize 96" x="950" y="950" z="0" />
-  <buffer name="Bleach" x="100" y="500" z="0" />
-  <buffer name="Imaging" x="500" y="500" z="0" />
-  <buffer name="Wash" x="900" y="500" z="0" />
+  <well_name="Hybridize 96" x="950" y="950" z="0" />
+  <well_name="Bleach" x="100" y="500" z="0" />
+  <well_name="Imaging" x="500" y="500" z="0" />
+  <well_name="Wash" x="900" y="500" z="0" />
 </positions>
 
 
