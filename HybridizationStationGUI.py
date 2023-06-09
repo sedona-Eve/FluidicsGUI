@@ -31,6 +31,16 @@ class CNCController:
         response = self.ser.readline()
         return response
 
+    def moveUp(self, distance):
+        # Send commands to move the CNC router up by the specified distance
+        self.sendCommand(f"G01 Z{distance}\n")
+        time.sleep(1)  # Pause for 1 second
+
+    def moveDown(self, distance):
+        # Send commands to move the CNC router down by the specified distance
+        self.sendCommand(f"G01 Z-{distance}\n")
+        time.sleep(1)  # Pause for 1 second
+
     def moveToPosition(self, x, y, z, well_name):
     #interprets the gcode of the cnc router
         # Move up before going to the well
