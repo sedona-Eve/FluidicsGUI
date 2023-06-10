@@ -25,6 +25,15 @@ class CNCController:
     def __init__(self, port, baudrate):
         ##you need to update these for your specific device 
         self.ser = serial.Serial(port, baudrate, timeout=1)
+	
+	# Set the origin with absolute positioning
+        #self.setOriginAbsolute(100, 200, 50)  # Replace with your desired origin position
+	
+    #def goToPointOfOrigin(self):
+        # Move to the point of origin (0, 0, 0)
+        #self.sendCommand("G00 X0 Y0 Z0\n")
+        #time.sleep(1)  # Pause for 1 second
+
 
     def sendCommand(self, cmd):
         self.ser.write(cmd.encode())
