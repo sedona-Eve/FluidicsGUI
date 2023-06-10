@@ -118,7 +118,7 @@ class Application(tk.Frame):
         # Creates all of the buttons on the GUI
         self.move_to_well_buttons = []
         for i in range(1, 97):
-            well_name = f"Well {i}"
+            well_name = f"Hybridize {i}"
             button = tk.Button(
                 self,
                 text=well_name,
