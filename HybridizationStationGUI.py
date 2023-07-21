@@ -13,33 +13,37 @@ Sedona Murphy
 2023-05-22
 
 '''
+import os
 import serial
 import time
 import tkinter as tk
 from tkinter import filedialog
+from tkinter import messagebox
 import xml.etree.ElementTree as ET
-import os 
+import subprocess
+
 
 
 class CNCController:
     def __init__(self, port, baudrate):
-        ##you need to update these for your specific device 
+        ##you need to update these for your specific device        
         self.ser = serial.Serial(port, baudrate, timeout=1)
-	
-	# Set the origin with absolute positioning
-        #self.setOriginAbsolute(100, 200, 50)  # Replace with your desired origin position
-	
-    #def goToPointOfOrigin(self):
-        # Move to the point of origin (0, 0, 0)
-        #self.sendCommand("G00 X0 Y0 Z0\n")
-        #time.sleep(1)  # Pause for 1 second
+        self.goToPointOfOrigin()
+        
+    def goToPointOfOrigin(self):
+        # Set the specified position as the origin using absolute positioning
+        self.sendCommand("$H\n")    #Homing device at the beginning of the experiment
+        self.sendCommand("G21 G90 G94\n")#sets machine in mm (G21) and allows feedrate code (G94)
+        self.sendCommand("G92 X0 Y0 Z0\n") #sets starting coordinates to 0
 
+        
+        time.sleep(1)  # Pause for 1 second
 
     def sendCommand(self, cmd):
         self.ser.write(cmd.encode())
         response = self.ser.readline()
         return response
-
+        
     def moveUp(self, distance):
         # Send commands to move the CNC router up by the specified distance
         self.sendCommand(f"G01 Z{distance}\n")
@@ -53,21 +57,21 @@ class CNCController:
     def moveToPosition(self, x, y, z, well_name):
     #interprets the gcode of the cnc router
         # Move up before going to the well
-        self.moveUp(10)   #update this depending on needle height and well height 
-        time.sleep(1)  # Pause for 1 second
+        self.moveUp(0)   #update this depending on needle height and well height 
+        time.sleep(1)  # Pause for 1 second in between moves
 
         # Move to the specified position (x, y, z) for the well
-        self.sendCommand(f"G00 X{x} Y{y}\n")
-        self.sendCommand(f"G01 Z{z}\n")
+        self.sendCommand(f"G01 F1000.0 X{x} Y{y}\n") #change speed with F
+        self.sendCommand(f"G01 F1000.0 Z{z}\n")
         time.sleep(1)  # Pause for 1 second
 
         # Move out of the well by a small distance
-        self.sendCommand("G01 X10 Y10\n")
-        time.sleep(1)  # Pause for 1 second
+        #self.sendCommand("G01 X10 Y10\n")
+        #time.sleep(1)  # Pause for 1 second
 
-        # Move down into the well
-        self.moveDown(10)  #update this depending on needle and well height
-        time.sleep(1)  # Pause for 1 second
+        # Move down into the well. This function can be used instead of defining z in coordinates
+        #self.moveDown(-30)  #update this depending on needle and well height
+        #time.sleep(1)  # Pause for 1 second
     
 
 
@@ -97,10 +101,10 @@ class Application(tk.Frame):
         self.grid()
         self.create_widgets()
         self.master.title("Hybridization Station")
-        self.master.geometry("1600x500")
+        self.master.geometry("1800x500")
         self.master.configure(bg='#ADD8E6')  # set background color
-        # self.cnc = CNCController('COM1', 115200)  #update this for your device 
-        #self.pump = PeristalticPump('COM2', 9600)  #update this for your device 
+        self.cnc = CNCController('COM4', 115200)  #update this for your device, uncomment and add COM port and baudrate (number)
+        #self.pump = PeristalticPump('COM2', 9600)  #update this for your device, uncomment and add COM portand baudrate (number)
         self.positions = self.loadPositions("CncCoords.xml")  #update this for your device
         self.protocol_file= None
         self.steps=[]
@@ -155,7 +159,7 @@ class Application(tk.Frame):
         self.buffer_option_menu.grid(row=0, column=14, sticky="W")
 
         self.dispense_button = tk.Button(
-            self, text="Move to Buffer", font=button_font, command=self.dispense
+            self, text="Move to Buffer", font=button_font, command=lambda well_name=well_name: self.dispense(well_name),
         )
         self.dispense_button.grid(row=1, column=14, pady=5)
 
@@ -200,7 +204,7 @@ class Application(tk.Frame):
             pady=5,
             command=self.load_protocol,
         )
-        self.load_protocol_button.grid(row=5, column=13, pady=5)
+        self.load_protocol_button.grid(row=8, column=13, pady=5)
 
         self.start_protocol_button = tk.Button(
             self,
@@ -222,7 +226,7 @@ class Application(tk.Frame):
             fg="white",
             font=("Arial", 12),
         )
-        self.stop_protocol_button.grid(row=6, column=13)
+        self.stop_protocol_button.grid(row=5, column=13)
 
         self.status_label = tk.Label(
             self,
@@ -240,9 +244,24 @@ class Application(tk.Frame):
             fg="blue",
             font=("Arial", 12),
         )
-        self.show_status_button.grid(row=7, column=13)
+        self.show_status_button.grid(row=6, column=13)
 
         self.grid()
+
+
+        self.open_gui_button = tk.Button(
+            self,
+            text="Open Protocol setup",
+            font=button_font,
+            padx=5,
+            pady=5,
+            command=self.open_another_gui,
+        )
+        self.open_gui_button.grid(row=7, column=13)
+
+    def open_another_gui(self):
+        subprocess.Popen(["python", "Define_Protocol.py"])  # Replace "another_gui_script.py" with the actual filename of your another GUI script
+
 
     def configure_gui(self):
         # Apply some basic styling to the GUI
@@ -264,23 +283,24 @@ class Application(tk.Frame):
             positions[name]["x"] = float(child.attrib["x"])
             positions[name]["y"] = float(child.attrib["y"])
             positions[name]["z"] = float(child.attrib["z"])
-        #print(positions)
+        print(positions)
         return positions    
    
     def move_to_well(self, well_name):
         print("moving to well:", well_name)
-        well_name = self.buffer_selection.get()
+       #well_name = self.buffer_selection.get()
         x = self.positions[well_name]["x"]
         y = self.positions[well_name]["y"]
         z = self.positions[well_name]["z"]
         self.cnc.moveToPosition(x, y, z, well_name)
-
-    def dispense(self):
+       
+    def dispense(self, well_name):        
         well_name = self.buffer_selection.get()
+        print("moving to well:", well_name)
         x = self.positions[well_name]["x"]
         y = self.positions[well_name]["y"]
         z = self.positions[well_name]["z"]
-        self.cnc.moveToPosition(x, y, z)
+        self.cnc.moveToPosition(x, y, z, well_name)
 
     def start_flow(self):
         speed = self.flow_rate_entry.get()
