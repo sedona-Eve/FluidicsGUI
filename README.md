@@ -79,7 +79,7 @@ pip install virtualenv
 7. Run the GUI: To run the GUI, run the following command:
 
    ```
-   python main.py
+   python HybridizationStationGUI.py
    ```
 
    This command starts the GUI.
