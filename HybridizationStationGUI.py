@@ -11,14 +11,14 @@ set the COM ports and baudrates of cnc and pump and uncomment before running
 
 Sedona Murphy 
 2023-05-22
+Tonia Hafner
+2023-08-01
 
 '''
-import os
 import serial
 import time
 import tkinter as tk
 from tkinter import filedialog
-from tkinter import messagebox
 import xml.etree.ElementTree as ET
 import subprocess
 
@@ -26,21 +26,45 @@ import subprocess
 
 class CNCController:
     def __init__(self, port, baudrate):
-        ##you need to update these for your specific device        
-        self.ser = serial.Serial(port, baudrate, timeout=1)
-        self.goToPointOfOrigin()
-        
-    def goToPointOfOrigin(self):
-        # Set the specified position as the origin using absolute positioning
-        self.sendCommand("$H\n")    #Homing device at the beginning of the experiment
-        self.sendCommand("G21 G90 G94\n")#sets machine in mm (G21) and allows feedrate code (G94)
-        self.sendCommand("G92 X0 Y0 Z0\n") #sets starting coordinates to 0
+       # serial_port = 'COM4'
+       # baud_rate = 115200
+      
+       try:
+           self. ser = serial.Serial(port, baudrate, timeout=2)
+           print("Serial connection established.")
+    
+           # Wait for a moment to allow the CNC controller to initialize
+           time.sleep(2)
+    
+           # Send the homing command ($H)
+           homing_command = "$H"
+           response = self.sendCommand(homing_command)
+           time.sleep(5)
+           
+           # Print the response from the CNC controller
+           print("Response:", response)
+           
+            # response=self.send_gcode_command("G21 G90 G94")#sets machine in mm (G21) and allows feedrate code (G94)
+            # # Print the response from the CNC controller
+            # print("Response to G21 G90 G94:", response)
+            # response=self.send_gcode_command("G92 X0 Y0 Z0") #sets starting coordinates to 0
+            # # Print the response from the CNC controller
+            # print("Response to G92 X0 Y0 Z0:", response)          
+           # time.sleep(2)
+ 
+    
+       except serial.SerialException as e:
+             print("Serial connection error:", e)
+    
 
+    # def send_gcode_command(self, command):
+    #         self.ser.write((command + '\n').encode())
+    #         response = self.ser.readline()
+    #         return response
         
-        time.sleep(1)  # Pause for 1 second
-
+        
     def sendCommand(self, cmd):
-        self.ser.write(cmd.encode())
+        self.ser.write((cmd + '\n').encode())
         response = self.ser.readline()
         return response
         
@@ -65,33 +89,23 @@ class CNCController:
         self.sendCommand(f"G01 F1000.0 Z{z}\n")
         time.sleep(1)  # Pause for 1 second
 
-        # Move out of the well by a small distance
-        #self.sendCommand("G01 X10 Y10\n")
-        #time.sleep(1)  # Pause for 1 second
 
-        # Move down into the well. This function can be used instead of defining z in coordinates
-        #self.moveDown(-30)  #update this depending on needle and well height
-        #time.sleep(1)  # Pause for 1 second
-    
+# class PeristalticPump:
+#     def __init__(self, port, baudrate):
+#         self.ser = serial.Serial(port, baudrate, timeout=1)
 
+#     # def sendCommand(self, cmd):
+#     #     self.ser.write(cmd.encode())
+#     #     response = self.ser.readline()
+#     #     return response
 
+#     def startFlow(self, speed, duration):
+#         cmd = f"START {speed} {duration}\n"
+#         self.sendCommand(cmd)
 
-class PeristalticPump:
-    def __init__(self, port, baudrate):
-        self.ser = serial.Serial(port, baudrate, timeout=1)
-
-    def sendCommand(self, cmd):
-        self.ser.write(cmd.encode())
-        response = self.ser.readline()
-        return response
-
-    def startFlow(self, speed, duration):
-        cmd = f"START {speed} {duration}\n"
-        self.sendCommand(cmd)
-
-    def stopFlow(self):
-        cmd = "STOP\n"
-        self.sendCommand(cmd)
+#     def stopFlow(self):
+#         cmd = "STOP\n"
+#         self.sendCommand(cmd)
 
 
 class Application(tk.Frame):
@@ -482,3 +496,4 @@ if __name__ == '__main__':
     app = Application(master=root)
     app.load_default_protocol("default_protocol.xml")
     app.mainloop()
+    __init__
