@@ -1,3 +1,12 @@
+'''''
+#adapted by Sedona Murphy from gilson_mp3.by written by:
+
+# George Emanuel with modifications by Jeff Moffitt
+# 11/16/15
+# jeffmoffitt@gmail.com
+
+''''
+
 import serial
 import time
 
