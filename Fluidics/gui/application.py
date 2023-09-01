@@ -9,7 +9,7 @@ import subprocess
 
 
 class Application(tk.Frame):
-    def __init__(self, master=None):
+    def __init__(self, master=None, cnc=None, pump=None):
         super().__init__(master)
         self.master = master
         self.grid()
@@ -17,8 +17,8 @@ class Application(tk.Frame):
         self.master.title("Hybridization Station")
         self.master.geometry("1800x500")
         self.master.configure(bg='#ADD8E6')  # set background color
-        #self.cnc = CNCController('COM4', 115200)  #update this for your device, uncomment and add COM port and baudrate (number)
-        #self.pump = PeristalticPump('COM2', 9600)  #update this for your device, uncomment and add COM portand baudrate (number)
+        #self.cnc = cnc  #
+        self.pump = pump #
         self.positions = self.loadPositions("CncCoords.xml")  #update this for your device
         self.protocol_file= None
         self.steps=[]
@@ -217,8 +217,10 @@ class Application(tk.Frame):
         self.cnc.moveToPosition(x, y, z, well_name)
 
     def start_flow(self):
+        print("starting Flow...")
         speed = float(self.flow_rate_entry.get())
         duration = float(self.flow_duration_entry.get())
+        print(f"Speed: {speed}, Duration: {duration}")
         self.pump.startFlow(speed, duration)
     
     def stop_flow(self):
