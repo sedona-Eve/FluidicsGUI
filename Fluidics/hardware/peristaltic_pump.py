@@ -1,54 +1,38 @@
-import os
 import serial
 import time
-import subprocess
 
+acknowledge = '\x06'
+start = '\x0A'
+stop = '\x0D'
 
 class PeristalticPump:
-    def __init__(self, port, baudrate, simulate=False, flip_flow_direction=False, pump_ID=30):
+    def __init__(self, port, baudrate, pump_ID=30, simulate=False, flip_flow_direction=False, serial_verbose=False):
         self.serial = None
         self.simulate = simulate
         self.flip_flow_direction = flip_flow_direction
         self.pump_ID = pump_ID
-        self.verbose = parameters.get("verbose", True)
-        self.serial_verbose = parameters.get("serial_verbose", True) #set to false when done troubleshooting
-        
+        self.serial_verbose = serial_verbose
 
-        # Initialize the serial port
         try:
-            self.serial = serial.Serial(port=self.com_port, 
-                            baudrate=19200, 
-                            parity=serial.PARITY_EVEN, 
-                            bytesize=serial.EIGHTBITS, 
-                            stopbits=serial.STOPBITS_TWO, 
-                            timeout=0.1)
+            self.serial = serial.Serial(
+                port=port,
+                baudrate=baudrate,
+                parity=serial.PARITY_EVEN,
+                bytesize=serial.EIGHTBITS,
+                stopbits=serial.STOPBITS_TWO,
+                timeout=0.1
+            )
         except serial.SerialException as e:
             raise RuntimeError(f"Error: Unable to open the serial port: {e}")
-            # may need to update this based on the specific one you are using.
 
-        # Define communication protocol variables
-        self.acknowledge = '\x06'
-        self.start = '\x0A'
-        self.stop = '\x0D'
-        
-    def sendBuffered(self, unitNumber, command):
-        self.selectUnit(unitNumber)
-        self.sendAndAcknowledge(self.start + command + self.stop)
+        self.flow_status = "Stopped"
+        self.speed = 0.0
+        self.direction = "Forward"
+
         self.disconnect()
-
-    def sendString(self, string):
-        if self.serial:
-            self.serial.write(string.encode())
-
-    def getResponse(self):
-        response = b""
-        if self.serial:
-            while True:
-                data = self.serial.read(1)
-                if not data:
-                    break
-                response += data
-        return response
+        self.enableRemoteControl(1)
+        self.startFlow(self.speed, self.direction)
+        self.identification = self.getIdentification()
 
     def getIdentification(self):
         return self.sendImmediate(self.pump_ID, "%")
@@ -58,6 +42,9 @@ class PeristalticPump:
             self.sendBuffered(self.pump_ID, "SR")
         else:
             self.sendBuffered(self.pump_ID, "SK")
+
+    def readDisplay(self):
+        return self.sendImmediate(self.pump_ID, "R")
 
     def getStatus(self):
         message = self.readDisplay()
@@ -91,92 +78,48 @@ class PeristalticPump:
                 self.sendBuffered(self.pump_ID, "K>")
             else:
                 self.sendBuffered(self.pump_ID, "K<")
-                
 
     def setSpeed(self, rotation_speed):
         if rotation_speed >= 0 and rotation_speed <= 48:
             rotation_int = int(rotation_speed * 100)
             self.sendBuffered(self.pump_ID, f"R{rotation_int:04d}")
 
-    def startFlow(self, speed, duration, direction="Forward"):
+    def startFlow(self, speed, direction="Forward"):
         self.setSpeed(speed)
         self.setFlowDirection(direction == "Forward")
-        time.sleep(duration)  # Wait for the specified duration
-        self.stopFlow()  # Stop the flow after the duration
 
     def stopFlow(self):
         self.setSpeed(0.0)
         return True
 
-
-    def readDisplay(self):
-            # Send the "R" command to request the display status
-            response = self.sendImmediate(self.pump_ID, "R")
-
-            if not response:  # Check if response is an empty string
-                print('Error: No response received from the pump!')
-                return None
-
-            # The response format is "dXX.XXca"
-            direction_char = response[1]
-            speed_str = response[2:7]
-            control_char = response[7]
-
-            # Interpret the direction character
-            direction = ""
-            if direction_char == " ":
-                direction = "Not Running"
-            elif direction_char == "+":
-                direction = "Forward"
-            elif direction_char == "-":
-                direction = "Reverse"
-
-            # Convert the speed string to a floating-point value
-            speed = float(speed_str)
-
-            # Interpret the control character
-            control = ""
-            if control_char == "K":
-                control = "Keypad"
-            elif control_char == "R":
-                control = "Remote"
-
-            return direction, speed, control
-
-
     def sendImmediate(self, unitNumber, command):
         self.selectUnit(unitNumber)
         self.sendString(command[0])
         newCharacter = self.getResponse()
-    
-        if not newCharacter:  # Check if newCharacter is an empty string
-            print('Error: No response received from the pump!')
-            self.disconnect()
-            return None
-
+        if len(newCharacter) < 1:
+            print('error connecting to pump!')
         response = ""
         while not (ord(newCharacter) & 0x80):
-            response += newCharacter.decode()
-            self.sendString(self.acknowledge)
+            response += newCharacter.decode() #decodes bytes to str
+            self.sendString(acknowledge)
             newCharacter = self.getResponse()
-
-            if not newCharacter:  # Check if newCharacter is an empty string
-                print('Error: No response received from the pump!')
-                self.disconnect()
-                return None
 
         response += chr(ord(newCharacter) & ~0x80)
         self.disconnect()
 
         return response
 
+    def sendBuffered(self, unitNumber, command):
+        self.selectUnit(unitNumber)
+        self.sendAndAcknowledge(start + command + stop)
+        self.disconnect()
 
     def disconnect(self):
         self.sendAndAcknowledge('\xff')
 
     def selectUnit(self, unitNumber):
         devSelect = chr(0x80 | unitNumber)
-        self.sendString(devSelect) 
+        self.sendString(devSelect)
 
         return self.getResponse() == devSelect
 
@@ -184,3 +127,17 @@ class PeristalticPump:
         for i in range(0, len(string)):
             self.sendString(string[i])
             self.getResponse()
+
+    def sendString(self, string):
+        if self.serial:
+            self.serial.write(string.encode())
+
+    def getResponse(self):
+        response = b""
+        if self.serial:
+            while True:
+                data = self.serial.read(1)
+                if not data:
+                    break
+                response += data
+        return response
