@@ -5,11 +5,11 @@ from hardware.peristaltic_pump import PeristalticPump
 
 if __name__ == '__main__':
     root = tk.Tk()  # Create the root window
-    app = Application(master=root)  # Create an instance of the Application class
-    app.load_default_protocol("default_protocol.xml")  # Load the default protocol
 
     # Create instances of CNCController and PeristalticPump classes
-    #cnc = CNCController('COM4', 115200)  #uncomment when hardware connected 
-    #pump = PeristalticPump('COM2', 9600) #uncomment when hardware connected 
+    cnc = CNCController('COM4', 115200)  #uncomment when hardware connected 
+    pump = PeristalticPump('COM6', 19200) #uncomment when hardware connected 
+    app= Application(master=root, pump=pump, cnc=cnc)  # Create an instance of the Application class, a
+    app.load_default_protocol("default_protocol.xml")  # Load the default protocol 
 
     app.mainloop()  # Start the main event loop
