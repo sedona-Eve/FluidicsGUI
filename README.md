@@ -1,3 +1,6 @@
+###Download/pull the FLUIDICS folder as it is modular and way less messy than everything in one .py file, download the folder and activate the environment within the folder and then just run main.py to launch the GUI###
+
+
 # FluidicsGUI
 Instructions and python code for automated fluidics system to run multiple rounds of hybridization
 
