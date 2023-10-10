@@ -7,6 +7,7 @@ class CNCController:
     def __init__(self, port, baudrate):
         ##you need to update these for your specific device        
         self.ser = serial.Serial(port, baudrate, timeout=1)
+        time.sleep(2)
         self.goToPointOfOrigin()
         
     def goToPointOfOrigin(self):
