@@ -240,6 +240,7 @@ class Application(tk.Frame):
     
     def stop_flow(self):
         self.pump.stopFlow()
+	    
     def pause_action(self):
     	try:
         	pause_duration = float(self.pause_duration_entry.get())
@@ -361,7 +362,10 @@ class Application(tk.Frame):
                             float(action_attributes["time"]),
                         )
                     elif action_name == "pause":
-                        self.pause(action_attributes["time"])
+			pause_duration = action_attributes.get("time")
+			self.pause_action(float(pause_duration))  # Convert to float if necessary
+
+                        
 
             # Process loaded steps
             if step in self.loaded_steps:
