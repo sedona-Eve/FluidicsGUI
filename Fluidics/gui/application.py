@@ -353,7 +353,7 @@ class Application(tk.Frame):
                         if "well" in action_attributes:
                             self.move_to_well(action_attributes["well"])
                         elif "buffer" in action_attributes:
-                            self.move_to_buffer(action_attributes["buffer"])
+                            self.dispense(action_attributes["buffer"])
                     elif action_name == "pump":
                         self.startFlow(
                             action_attributes["name"],
