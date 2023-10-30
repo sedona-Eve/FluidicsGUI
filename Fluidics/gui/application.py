@@ -49,6 +49,21 @@ class Application(tk.Frame):
             button.grid(row=(i - 1) // 12 + 2, column=(i - 1) % 12, padx=2, pady=2)
             self.move_to_well_buttons.append(button)
 
+	self.pause_duration_label = tk.Label(self, text="Pause Duration (sec):", font=label_font)
+	self.pause_duration_label.grid(row=7, column=13, sticky="E")
+	self.pause_duration_entry = tk.Entry(self, font=label_font)
+	self.pause_duration_entry.grid(row=7, column=14, sticky="W", pady=5)
+
+	self.pause_button = tk.Button(
+    	    self,
+    	    text="Pause",
+    	    font=button_font,
+    	    padx=5,
+   	    pady=5,
+    	    command=self.pause_action,
+	)
+	self.pause_button.grid(row=8, column=13, pady=5)
+
         # Create dropdown menu for hybridization selection
         self.hybridization_label = tk.Label(self, text="Plate:", font=label_font)
         self.hybridization_label.grid(row=1, column=0, sticky="E")
@@ -225,7 +240,16 @@ class Application(tk.Frame):
     
     def stop_flow(self):
         self.pump.stopFlow()
+    def pause_action(self):
+    	try:
+        	pause_duration = float(self.pause_duration_entry.get())
+    	except ValueError:
+        	messagebox.showerror("Error", "Invalid pause duration. Please enter a valid number.")
+        	return
 
+    	print(f"Pausing for {pause_duration} seconds...")
+    	time.sleep(pause_duration)
+    	print("Pause complete.")
 
 
     def load_default_protocol(self, default_protocol_path):
@@ -294,6 +318,7 @@ class Application(tk.Frame):
         if self.protocol_file:
             # Load protocol from the user-defined file
             self.load_protocol_from_file(self.protocol_file)
+	    self.steps = self.loaded_steps  # Use the loaded_steps list for execution
         else:
             # Get the selected hybridization from the dropdown menu
             selected_hybridization = self.hybridization_selection.get()
