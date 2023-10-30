@@ -93,9 +93,12 @@ class PeristalticPump:
             rotation_int = int(rotation_speed * 100)
             self.sendBuffered(self.pump_ID, f"R{rotation_int:04d}")
 
-    def startFlow(self, speed, direction="Forward"):
+    def startFlow(self, speed, direction="Forward", duration=None):
         self.setSpeed(speed)
         self.setFlowDirection(direction == "Forward")
+        if duration is not None:
+            time.sleep(duration)  # Wait for the specified duration
+            self.stopFlow()  # Stop the flow after the specified duration
 
     def stopFlow(self):
         self.setSpeed(0.0)
