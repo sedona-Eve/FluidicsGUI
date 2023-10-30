@@ -241,7 +241,7 @@ class Application(tk.Frame):
     def stop_flow(self):
         self.pump.stopFlow()
 	    
-    def pause_action(self):
+    def pause_action(self, pause_duration):
     	try:
         	pause_duration = float(self.pause_duration_entry.get())
     	except ValueError:
