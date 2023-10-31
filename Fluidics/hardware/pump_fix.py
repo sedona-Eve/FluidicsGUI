@@ -1,5 +1,8 @@
 '''
 bugs fixed 10-30-23 Sedona Murphy 
+# adapted from gilsonmp3.py by George Emanuel with modifications by Jeff Moffitt
+# 11/16/15
+
 pump class to work with cnc for portable fluidics system. 
 '''
 
@@ -7,6 +10,7 @@ import os
 import serial
 import time
 import subprocess
+import threading
 
 # Define communication protocol variables
 acknowledge = '\x06'
@@ -112,6 +116,12 @@ class PeristalticPump:
 
     def stopFlow(self):
         self.setSpeed(0.0)
+
+        # Create a new thread to run the stop_flow method
+        stop_flow_thread = threading.Thread(target=stop_flow)
+        
+        # Start the thread
+        stop_flow_thread.start()
         return True
 
 
