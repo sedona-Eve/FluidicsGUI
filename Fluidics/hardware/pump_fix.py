@@ -4,13 +4,14 @@ bugs fixed 10-30-23 Sedona Murphy
 # 11/16/15
 
 pump class to work with cnc for portable fluidics system. 
+to do: fix it so stopFlow can happen during a set flow duration, may need to implement threading 
 '''
 
 import os
 import serial
 import time
 import subprocess
-import threading
+
 
 # Define communication protocol variables
 acknowledge = '\x06'
@@ -115,15 +116,10 @@ class PeristalticPump:
         self.stopFlow()  # Stop the flow after the duration
 
     def stopFlow(self):
-        # Define a new method to stop the flow without freezing the GUI
-        def stop_flow():
-            self.setSpeed(0.0)
         
-        # Create a new thread to run the stop_flow method
-        stop_flow_thread = threading.Thread(target=stop_flow)
+        self.setSpeed(0.0)
         
-        # Start the thread
-        stop_flow_thread.start()
+       
         return True
 
 
