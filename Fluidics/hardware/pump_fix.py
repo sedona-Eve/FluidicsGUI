@@ -115,8 +115,10 @@ class PeristalticPump:
         self.stopFlow()  # Stop the flow after the duration
 
     def stopFlow(self):
-        self.setSpeed(0.0)
-
+        # Define a new method to stop the flow without freezing the GUI
+        def stop_flow():
+            self.setSpeed(0.0)
+        
         # Create a new thread to run the stop_flow method
         stop_flow_thread = threading.Thread(target=stop_flow)
         
