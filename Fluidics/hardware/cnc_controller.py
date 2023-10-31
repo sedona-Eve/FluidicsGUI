@@ -3,6 +3,7 @@ import serial
 import time
 import subprocess
 
+
 class CNCController:
     def __init__(self, port, baudrate):
         ##you need to update these for your specific device        
@@ -17,7 +18,7 @@ class CNCController:
         self.sendCommand("G92 X0 Y0 Z0\n") #sets starting coordinates to 0
 
         
-        time.sleep(1)  # Pause for 1 second
+        time.sleep(2)  # Pause for 1 second
 
     def sendCommand(self, cmd):
         self.ser.write(cmd.encode())
@@ -27,23 +28,23 @@ class CNCController:
     def moveUp(self, distance):
         # Send commands to move the CNC router up by the specified distance
         self.sendCommand(f"G01 Z{distance}\n")
-        time.sleep(1)  # Pause for 1 second
+        time.sleep(2)  # Pause for 1 second
 
     def moveDown(self, distance):
         # Send commands to move the CNC router down by the specified distance
         self.sendCommand(f"G01 Z-{distance}\n")
-        time.sleep(1)  # Pause for 1 second
+        time.sleep(2)  # Pause for 1 second
 
     def moveToPosition(self, x, y, z, well_name):
     #interprets the gcode of the cnc router
         # Move up before going to the well
         self.moveUp(0)   #update this depending on needle height and well height 
-        time.sleep(1)  # Pause for 1 second in between moves
+        time.sleep(2)  # Pause for 1 second in between moves
 
         # Move to the specified position (x, y, z) for the well
         self.sendCommand(f"G01 F1000.0 X{x} Y{y}\n") #change speed with F
         self.sendCommand(f"G01 F1000.0 Z{z}\n")
-        time.sleep(1)  # Pause for 1 second
+        time.sleep(2)  # Pause for 1 second
 
         # Move out of the well by a small distance
         #self.sendCommand("G01 X10 Y10\n")
